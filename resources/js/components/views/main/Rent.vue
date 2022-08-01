@@ -164,14 +164,14 @@
         small
         class="mr-2"
         @click="editItem(item)"
-         v-if="admin"
+
       >
         mdi-pencil
       </v-icon>
       <v-icon
         small
         @click="deleteItemConfirm(item)"
-        v-if="admin"
+
       >
         mdi-delete
       </v-icon>
@@ -210,7 +210,7 @@
         { text: 'Status', value: 'status' },
         { text: 'Actions', value: 'actions', sortable: false },
       ],
-      admin: localStorage.getItem('admin'),
+      admin: [],
       rents: [],
       customer: [],
       car:[],
@@ -221,7 +221,6 @@
           customer_id:'',
           rent_date: '',
           return_date:'',
-     
       },
       defaultItem: {
         car_id: '',
@@ -256,7 +255,6 @@
         val || this.closeDelete()
       },
     },
-
     created () {
       this.initialize()
     },

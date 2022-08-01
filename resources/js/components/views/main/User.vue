@@ -93,19 +93,6 @@
                     ></v-text-field>
                     
                   </v-col>
-                  <v-col
-                   cols="12"
-                    sm="6"
-                    md="4"
-                  >
-                     <v-select
-                     :items="office"
-                      v-model="editedItem.office_id"
-                      item-value="id" 
-                      item-text="name"
-                      label="Select Office"
-                      ></v-select>
-                  </v-col>
                    <v-col
                    cols="12"
                     sm="6"
@@ -197,7 +184,6 @@
         { text: 'Contact', value: 'contact' },
         { text: 'Address', value: 'address' },
         { text: 'Email', value: 'email' },
-        { text: 'Office', value: 'office.name' },
         { text: 'Role', value: 'role.type' },
         { text: 'Actions', value: 'actions', sortable: false },
       ],
@@ -212,7 +198,6 @@
         address: '',
         email: '',
         password: '',
-        office_id:'',
         role_id:'',
       },
       defaultItem: {
@@ -221,7 +206,6 @@
         address: '',
         email: '',
         password: '',
-        office_id:'',
         role_id:'',
       },
     }),
