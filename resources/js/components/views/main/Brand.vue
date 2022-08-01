@@ -141,7 +141,7 @@
 
     computed: {
       formTitle () {
-        return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
+        return this.editedIndex === -1 ? 'New Brand' : 'Edit Brand'
       },
     },
 

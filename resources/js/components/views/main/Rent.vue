@@ -194,22 +194,6 @@
       dialogDelete: false,
       nav: null,
       headers: [
-        {
-          text: '#',
-          align: 'start',
-          sortable: false,
-          value: 'id',
-        },
-        { text: 'Customer', value: 'name'},
-        { text: 'Cars', value: 'car.name' },
-        { text: 'Quantity', value: 'quantity' },
-        { text: 'Contact', value: 'customer.contact'},
-        { text: 'Address', value: 'customer.barangay'},
-        { text: 'Rented Date', value: 'rent_date' },
-        { text: 'Return Date', value: 'return_date' },
-        { text: 'Status', value: 'status' },
-      ],
-      admin: [
           {
           text: '#',
           align: 'start',
@@ -226,6 +210,7 @@
         { text: 'Status', value: 'status' },
         { text: 'Actions', value: 'actions', sortable: false },
       ],
+      admin: localStorage.getItem('admin'),
       rents: [],
       customer: [],
       car:[],

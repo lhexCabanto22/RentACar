@@ -94,7 +94,7 @@ class OfficeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
         $office = Office::find($id);
         $office->update([
             'name' => $request->name,

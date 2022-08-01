@@ -21,8 +21,8 @@ return new class extends Migration
             $table->boolean('status')->nullable()->default(false);
 
             $table->unsignedBigInteger('brand_id')->unsigned();
-
             $table->unsignedBigInteger('office_id')->unsigned();
+            
             $table->timestamps();
         });
     }

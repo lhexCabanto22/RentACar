@@ -235,9 +235,6 @@
     watch: {
       dialog (val) {
         if(val) {
-            axios.get('api/office').then(response =>{
-            this.office = response.data
-          })
            axios.get('api/role').then(response =>{
             this.role = response.data
           })
@@ -275,7 +272,7 @@
       },
 
       deleteItem (item) {
-          axios.delete('api/user/delete/'+item.id)
+          axios.delete('api/user/'+item.id)
           this.initialize()
           this.closeDelete()
       },

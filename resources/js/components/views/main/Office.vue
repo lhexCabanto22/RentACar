@@ -229,7 +229,7 @@
       },
 
       deleteItem (item) {
-        axios.delete('api/office/delete/'+item.id)
+        axios.delete('api/office/'+item.id)
         this.initialize()
         this.closeDelete()
       },
