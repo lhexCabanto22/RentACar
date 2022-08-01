@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\BrandController;
 use App\Http\Controllers\Api\CarController;
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\OfficeController;
 use App\Http\Controllers\Api\RentController;
 use App\Http\Controllers\Api\RoleController;
@@ -37,6 +38,7 @@ Route::group( ['middleware' => ['auth:api'] ],function(){
         Route::resource('/brand', BrandController::class);
          Route::resource('/rent', RentController::class);
           Route::resource('/customer', CustomerController::class);
+          Route::resource('/dashboard', DashboardController::class);
         
 /*RENT*/
 Route::get('/car_display', [RentController::class, 'display']);
@@ -46,6 +48,8 @@ Route::put('/updateCarStatus/{id}', [CarController::class, 'updateCarStatus']);
 
 Route::get('/rentToday', [NotificationController::class, 'rentToday']);
 Route::get('/returnToday', [NotificationController::class, 'returnToday']);
+
+Route::get('/dashboardTop', [DashboardController::class, 'dashboardTop']);
 
 });
 
